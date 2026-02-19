@@ -1,0 +1,199 @@
+@import "tailwindcss";
+/* @import "tw-animate-css"; */
+/* @import "shadcn/tailwind.css"; */
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Extending the theme with custom colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Animation durations */
+  --animate-duration: 0.5s;
+}
+
+/*
+  EcomStride — Dark + Acid Lime Brand
+  ----------------------------------------
+  Background: #050505 (deep black)
+  Accent:     #FA8112 (orange)
+  Text:       #EDEDED (off-white)
+*/
+
+:root {
+  --radius: 0.5rem;
+
+  /* Deep Black Theme */
+  --background: #050505;
+  --foreground: #ededed;
+
+  --card: #121212;
+  --card-foreground: #ededed;
+
+  --popover: #050505;
+  --popover-foreground: #ededed;
+
+
+  --primary: #FA8112;
+  --primary-foreground: #0a0a0a;
+
+  --secondary: #121212;
+  --secondary-foreground: #ededed;
+
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+
+  --accent: #FA8112;
+  --accent-foreground: #0a0a0a;
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: #333333;
+  --input: #333333;
+  --ring: #FA8112;
+}
+
+@layer utilities {
+  .text-profound {
+    font-size: clamp(3rem, 12vw, 10rem);
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(18, 18, 18, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-highlight {
+    @apply text-[#FA8112];
+  }
+
+  .text-gradient {
+    color: #FA8112;
+    font-weight: 700;
+  }
+
+  .bg-gradient-primary {
+    background: #FA8112;
+  }
+
+  .nav-link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#FA8112] after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5E7C6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FA8112;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222222;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Gradient text animation */
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 4s ease infinite;
+}
