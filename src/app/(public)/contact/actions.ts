@@ -1,6 +1,9 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function submitContactForm(formData: FormData) {
     const supabase = await createClient();
@@ -28,18 +31,28 @@ export async function submitContactForm(formData: FormData) {
         return { error: "Failed to submit form. Please try again later." };
     }
 
-    // Email Notification to Admin
+    // Email Notification to Admin via Resend
     try {
-        // This is a placeholder for actual email sending logic (e.g., using Resend, SendGrid, or nodemailer)
-        // For now, we log the intent as requested.
-        console.log(`[EMAIL NOTIFICATION] Sending lead data to hello@ecomstridesolution.com:`, {
-            to: "hello@ecomstridesolution.com",
-            subject: `New Lead: ${name}`,
-            data: { name, email, phone, service, message }
-        });
-
-        // In a real production environment, you would call your email service here:
-        // await resend.emails.send({ ... });
+        if (process.env.RESEND_API_KEY) {
+            await resend.emails.send({
+                from: "EcomStride <onboarding@resend.dev>",
+                to: "hello@ecomstridesolution.com",
+                subject: `New Lead: ${name} (${service})`,
+                html: `
+                    <h2>New Potential Client Lead</h2>
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+                    <p><strong>Service:</strong> ${service}</p>
+                    <p><strong>Message:</strong></p>
+                    <p>${message || "No message provided."}</p>
+                    <hr />
+                    <p>View this lead in your admin dashboard.</p>
+                `,
+            });
+        } else {
+            console.warn("RESEND_API_KEY is not set. Email notification skipped.");
+        }
     } catch (emailError) {
         console.error("Email notification failed:", emailError);
         // We still return success because the lead was saved to the database

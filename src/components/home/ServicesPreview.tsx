@@ -1,7 +1,7 @@
 "use client";
 
 import { services } from "@/data/services";
-import { ArrowRight, Box, BarChart, ShoppingCart, Search, Globe, ShieldCheck, Rocket, Tag, Package, FileSearch, Layers } from "lucide-react";
+import { ArrowRight, Box, BarChart, ShoppingCart, Search, Globe, ShieldCheck, Rocket, Tag, Package, FileSearch, Layers, Truck } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -18,10 +18,11 @@ const iconMap: Record<string, React.ElementType> = {
     "ppc": BarChart,
     "account-management": ShieldCheck,
     "trademark": ShieldCheck,
+    "freight-forwarding": Truck,
 };
 
 export default function ServicesPreview() {
-    // Show all 12 services
+    // Show all 13 services
     const allServices = services;
 
     return (
@@ -34,7 +35,7 @@ export default function ServicesPreview() {
                         viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FA8112]/10 border border-[#FA8112]/30 text-[#FA8112] text-sm mb-6 font-medium"
                     >
-                        12 Expert Services
+                        13 Expert Services
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.9 }}
