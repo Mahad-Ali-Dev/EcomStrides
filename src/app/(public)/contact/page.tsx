@@ -61,17 +61,17 @@ const contactInfo = [
     {
         icon: MapPin,
         title: "Office Location",
-        lines: ["123 Commerce St, Suite 100", "Business City, ST 12345"],
+        lines: ["Jada, Jhelum, Punjab", "Pakistan 49600"],
     },
     {
         icon: Phone,
         title: "Phone Number",
-        lines: ["+1 (555) 123-4567", "Mon-Fri, 9am – 6pm EST"],
+        lines: ["+92 332 6976408"],
     },
     {
         icon: Mail,
         title: "Email Address",
-        lines: ["hello@ecomstride.com", "We reply within 24 hours"],
+        lines: ["hello@ecomstride.com"],
     },
 ];
 
@@ -168,8 +168,8 @@ export default function ContactPage() {
                                     <Clock size={18} className="text-[#FA8112]" />
                                 </div>
                                 <div>
-                                    <p className="text-white font-semibold">Fast Response Time</p>
-                                    <p className="text-white/50 text-sm">We respond to all inquiries within 24 hours</p>
+                                    <p className="text-white font-semibold">24/7 Availability</p>
+                                    <p className="text-white/50 text-sm">We respond to all inquiries as soon as possible</p>
                                 </div>
                             </div>
 
@@ -179,7 +179,7 @@ export default function ContactPage() {
                                 <div className="relative z-10 text-center px-6">
                                     <div className="text-5xl mb-3 transform group-hover:scale-110 transition-transform duration-300">🚀</div>
                                     <p className="text-white font-bold text-lg">Ready to scale your brand?</p>
-                                    <p className="text-white/40 text-sm mt-1">10+ brands already growing with us</p>
+                                    <p className="text-white/40 text-sm mt-1">50+ brands already growing with us</p>
                                 </div>
                             </div>
                         </motion.div>

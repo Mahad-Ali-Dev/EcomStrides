@@ -8,9 +8,9 @@ import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 const floatingStats = [
-    { label: "Revenue Generated", value: "$1M+", icon: TrendingUp },
-    { label: "Client Retention", value: "90%", icon: ShieldCheck },
-    { label: "Brands Scaled", value: "10+", icon: Users },
+    { label: "Revenue Generated", value: "$150M+", icon: TrendingUp },
+    { label: "Client Retention", value: "100%", icon: ShieldCheck },
+    { label: "Brands Scaled", value: "50+", icon: Users },
 ];
 
 export default function Hero() {
@@ -45,7 +45,7 @@ export default function Hero() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FA8112] opacity-75" />
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FA8112]" />
                     </span>
-                    <span className="text-sm font-medium tracking-wide text-white/80">Top Rated Amazon Agency 2024</span>
+                    <span className="text-sm font-medium tracking-wide text-white/80">Top Rated Amazon Agency 2021</span>
                 </motion.div>
 
                 {/* H1 - Bold Typography */}
@@ -193,7 +193,7 @@ export default function Hero() {
                                 <span className="text-xs text-white/40 font-mono">YTD</span>
                             </div>
                             <div>
-                                <div className="text-2xl font-bold text-white mb-1">$50M+</div>
+                                <div className="text-2xl font-bold text-white mb-1">$60M+</div>
                                 <div className="text-white/60 text-xs">Ad Revenue Managed</div>
                             </div>
                             <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden mt-2">

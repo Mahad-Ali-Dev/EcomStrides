@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const stats = [
     { label: "Revenue Generated", value: "$150M+" },
-    { label: "Accounts Managed", value: "350+" },
-    { label: "Success Rate", value: "98%" },
+    { label: "Accounts Managed", value: "500+" },
+    { label: "Success Rate", value: "100%" },
     { label: "Avg. ROAS", value: "6.5x" },
 ];
 

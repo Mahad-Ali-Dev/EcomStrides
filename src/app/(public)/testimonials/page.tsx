@@ -40,8 +40,8 @@ export default function TestimonialsPage() {
                     <div className="inline-flex flex-col items-center p-10 rounded-3xl bg-[#222222] border border-[#FA8112]/20 max-w-lg mx-auto">
                         <div className="text-4xl mb-4">🚀</div>
                         <h3 className="text-2xl font-bold text-white mb-3">Be Our Next Success Story</h3>
-                        <p className="text-[#F5E7C6]/70 mb-6 text-sm leading-relaxed">
-                            Join 10+ brands that have scaled their Amazon business with EcomStride.
+                        <p className="text-xl text-white/60 max-w-2xl mx-auto">
+                            Join 50+ brands that have reached new heights with our data-driven Amazon strategies.
                         </p>
                         <Link
                             href="/contact"

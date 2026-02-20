@@ -7,15 +7,11 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
     {
         q: "How quickly will I see results after starting with EcomStride?",
-        a: "Most clients see meaningful improvements within the first 30-45 days. PPC optimizations typically show results within 2 weeks, while listing SEO and organic rank improvements take 4-8 weeks. Full account transformation timelines vary by brand size and competition, but our average client sees significant revenue growth within 90 days.",
+        a: "Most clients see meaningful improvements within the first two weeks. PPC optimizations typically show results within one week, while listing SEO and organic rank improvements take 2 to 3 weeks. Full account transformation timelines vary by brand size and competition, but our average client sees significant revenue growth within 15 to 30 days.",
     },
     {
         q: "Do I have to give you access to my Amazon account?",
         a: "Yes — we need account access to do our job effectively. We use a secure, permission-based access model where you grant specific roles to our team. You maintain full ownership and can revoke access at any time. We follow strict security protocols and have never had a data breach in our history.",
-    },
-    {
-        q: "Will you work on my account if it's been suspended?",
-        a: "Absolutely. Account suspensions and policy violations are one of our specialties. We've successfully reinstated dozens of suspended accounts that other agencies couldn't recover. Every case is unique, but we have a documented success rate above 90% for suspension appeals.",
     },
     {
         q: "What if I'm just starting out and don't have any products yet?",
@@ -24,10 +20,6 @@ const faqs = [
     {
         q: "Do you work with brands outside of Amazon US?",
         a: "Yes! We manage accounts across Amazon US, UK, CA, DE, FR, IT, ES, JP, AU, and more. Our international expansion service helps brands replicate their US success in new marketplaces, including full listing localization and market-specific PPC strategies.",
-    },
-    {
-        q: "How is EcomStride different from other Amazon agencies?",
-        a: "Three things set us apart: (1) We're Amazon-only — no Shopify, no Walmart, no TikTok Shop. Deep specialization means better results. (2) Full transparency — you get login access to every tool we use, and weekly reports with real data. (3) Accountability — we set KPIs before we start and we're judged by them every month.",
     },
     {
         q: "What does 'Full Account Management' actually include?",

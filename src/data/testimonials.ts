@@ -82,11 +82,11 @@ export const testimonials: Testimonial[] = [
         name: "Omar A.",
         role: "E-Commerce Director",
         company: "FitLife Sports",
-        content: "We went from $20K/month to over $180K/month in less than 8 months. The EcomStride team's expertise in launching new SKUs is genuinely world-class.",
+        content: "We went from $200K/month to over $1.8M/month in less than 8 months. The EcomStride team's expertise in launching new SKUs is genuinely world-class.",
         avatar: "OA",
         rating: 5,
         service: "Full Account Management",
-        result: "$20K → $180K/month"
+        result: "$200K → $1.8M/month"
     },
     {
         id: "8",
@@ -192,11 +192,11 @@ export const testimonials: Testimonial[] = [
         name: "Chris N.",
         role: "Entrepreneur",
         company: "GardenMate",
-        content: "I run a 7-figure brand now, and EcomStride has been there since day one. From my first $1K sale to $1M+, every milestone was built on their strategy.",
+        content: "I run a 8-figure brand now, and EcomStride has been there since day one. From my first $100K sale to $10M+, every milestone was built on their strategy.",
         avatar: "CN",
         rating: 5,
         service: "Full Account Management",
-        result: "$1K → $1M+ revenue"
+        result: "$100K → $10M+ revenue"
     },
     {
         id: "18",

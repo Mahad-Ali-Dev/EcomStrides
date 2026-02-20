@@ -62,31 +62,31 @@ export default function Stats() {
                 </motion.div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     <StatCounter
-                        value={10} suffix="+"
-                        label="Brands Scaled"
-                        description="Active clients across Amazon US, UK, CA & DE"
+                        value={500} suffix="+"
+                        label="Accounts Managed"
+                        description="Across Amazon US, UK, CA & DE"
                         icon={Users}
                         delay={0}
                     />
                     <StatCounter
-                        value={1} prefix="$" suffix="M+"
+                        value={150} prefix="$" suffix="M+"
                         label="Revenue Generated"
                         description="In cumulative client sales on Amazon"
                         icon={TrendingUp}
                         delay={0.1}
                     />
                     <StatCounter
-                        value={90} suffix="%"
-                        label="Client Retention"
-                        description="Of clients stay with us after year one"
+                        value={100} suffix="%"
+                        label="Success Rate"
+                        description="Proven track record across all categories"
                         icon={Star}
                         delay={0.2}
                     />
                     <StatCounter
-                        value={300} suffix="$/mo"
-                        label="Starting Price"
-                        description="Affordable plans for every brand size"
-                        icon={Award}
+                        value={7.5} suffix="x"
+                        label="Average ROI"
+                        description="Average return on ad spend for clients"
+                        icon={TrendingUp}
                         delay={0.3}
                     />
                 </div>

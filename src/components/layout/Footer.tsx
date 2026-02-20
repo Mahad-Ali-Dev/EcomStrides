@@ -11,8 +11,8 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center gap-2 mb-4">
-                            <div className="relative h-28 w-80">
-                                <img src="/logo.png" alt="EcomStride" className="w-full h-full object-contain object-left" />
+                            <div className="relative h-16 md:h-24 w-auto">
+                                <img src="/2.png" alt="EcomStride" className="h-full w-auto object-contain object-left" />
                             </div>
                         </Link>
                         <p className="text-sm leading-relaxed">

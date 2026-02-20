@@ -453,33 +453,61 @@ function ServiceVisual({ service }: { service: Service; index: number }) {
 
     if (service.id === "aplus") {
         return (
-            <div className="w-full bg-white rounded-2xl p-6 border border-zinc-200">
-                <div className="text-zinc-400 text-xs uppercase tracking-wider mb-4">A+ Content Modules</div>
-                <div className="aspect-video bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center mb-4 overflow-hidden relative">
-                    <div className="text-center relative z-10">
-                        <div className="w-14 h-14 rounded-2xl bg-zinc-800 mx-auto mb-3 flex items-center justify-center">
-                            <ImageIcon size={24} className="text-white" />
+            <div className="w-full bg-[#121212] rounded-2xl p-6 border border-white/10 shadow-2xl">
+                <div className="text-white/40 text-[10px] uppercase tracking-[0.2em] mb-4">Premium EBC / A+ Design</div>
+
+                {/* Main Visual Placeholder */}
+                <div className="aspect-[16/9] bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl mb-6 overflow-hidden relative group">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-full h-full p-4 flex flex-col gap-3">
+                            {/* Simulated A+ Module Layout */}
+                            <div className="h-1/2 w-full bg-white/5 rounded-lg border border-white/5 flex items-center justify-center overflow-hidden">
+                                <ImageIcon size={32} className="text-[#FA8112] opacity-20" />
+                                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                                    <div className="h-3 w-1/3 bg-[#FA8112]/40 rounded mb-2" />
+                                    <div className="h-2 w-1/2 bg-white/20 rounded" />
+                                </div>
+                            </div>
+                            <div className="flex-1 flex gap-3">
+                                <div className="flex-1 bg-white/5 rounded-lg border border-white/5" />
+                                <div className="flex-1 bg-white/5 rounded-lg border border-white/5" />
+                                <div className="flex-1 bg-white/5 rounded-lg border border-white/5" />
+                            </div>
                         </div>
-                        <p className="text-zinc-900 text-sm font-semibold">Brand Story Module</p>
-                        <p className="text-zinc-500 text-xs mt-1">Lifestyle imagery + copy</p>
                     </div>
+                    <div className="absolute inset-0 bg-[#FA8112]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="grid grid-cols-3 gap-2 mb-3">
-                    {["Hero Banner", "Feature Grid", "Comparison Chart"].map((module, i) => (
+
+                {/* Module Tags */}
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                    {[
+                        { label: "Product Photography", icon: ImageIcon },
+                        { label: "Infographic Design", icon: BarChart2 },
+                        { label: "Premium Copywriting", icon: FileText },
+                        { label: "Competitor Analysis", icon: Search },
+                    ].map((item, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ delay: 0.3 + i * 0.1 }}
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 + i * 0.1 }}
                             viewport={{ once: true }}
-                            className="aspect-square bg-zinc-50 rounded-lg border border-zinc-200 flex items-center justify-center text-xs text-zinc-400 text-center p-2"
+                            className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5"
                         >
-                            {module}
+                            <item.icon size={14} className="text-[#FA8112]" />
+                            <span className="text-[11px] text-white/70 font-medium">{item.label}</span>
                         </motion.div>
                     ))}
                 </div>
-                <div className="flex items-center gap-2 p-3 bg-zinc-100 border border-zinc-300 rounded-xl">
-                    <span className="text-zinc-700 text-xs font-medium">📈 Average conversion lift: <strong>+15%</strong></span>
+
+                {/* Conversion Stat */}
+                <div className="flex items-center justify-between p-4 bg-[#FA8112]/10 border border-[#FA8112]/20 rounded-xl relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    <div className="flex flex-col">
+                        <span className="text-[10px] text-[#FA8112] uppercase font-bold tracking-wider">Conversion Impact</span>
+                        <span className="text-xl font-black text-white">+28% <span className="text-sm font-medium text-white/60 text-xs">avg lift</span></span>
+                    </div>
+                    <BadgeCheck className="text-[#FA8112] w-8 h-8 opacity-40" />
                 </div>
             </div>
         );

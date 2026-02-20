@@ -6,62 +6,24 @@ import Link from "next/link";
 
 const plans = [
     {
-        name: "Starter",
-        tagline: "Perfect for new sellers",
-        price: "300",
-        period: "/ month",
-        description: "Get your Amazon business off the ground with expert listing optimization and PPC setup.",
+        name: "Amazon A-Z Management",
+        tagline: "Full-service growth for Amazon brands",
+        price: "150-250",
+        period: "/ ASIN",
+        description: "Everything you need to scale including full account management, A+ content, and advanced PPC optimization.",
         features: [
-            "Up to 10 ASINs managed",
-            "Full listing optimization",
-            "PPC setup & management",
-            "Weekly performance report",
-            "Email & chat support",
-            "Monthly strategy call",
+            "Full Account Management",
+            "A+ Content & EBC Design",
+            "Advanced PPC Optimization",
+            "Inventory Forecasting",
+            "Review Management",
+            "Bi-weekly Strategy Calls",
+            "Dedicated Account Manager",
+            "Competitor Monitoring",
         ],
         cta: "Get Started",
-        highlighted: false,
-        badge: null,
-    },
-    {
-        name: "Growth",
-        tagline: "Most popular for 6-figure brands",
-        price: "1,000",
-        period: "/ month",
-        description: "Everything you need to scale past $100K/month with full account management and A+ content.",
-        features: [
-            "Up to 50 ASINs managed",
-            "A+ Content & EBC design",
-            "Advanced PPC optimization",
-            "Inventory forecasting",
-            "Review management",
-            "Bi-weekly strategy calls",
-            "Dedicated account manager",
-            "Competitor monitoring",
-        ],
-        cta: "Start Scaling",
         highlighted: true,
         badge: "Most Popular",
-    },
-    {
-        name: "Enterprise",
-        tagline: "For 7-figure Amazon brands",
-        price: "Custom",
-        period: "",
-        description: "Full A to Z white-glove account management for high-volume brands across multiple marketplaces.",
-        features: [
-            "Unlimited ASINs",
-            "Multi-marketplace management",
-            "Custom A+ & storefront",
-            "Dedicated team of 4+",
-            "24/7 priority support",
-            "Weekly executive reports",
-            "International expansion",
-            "Custom KPIs & SLAs",
-        ],
-        cta: "Contact Sales",
-        highlighted: false,
-        badge: null,
     },
 ];
 
@@ -88,62 +50,63 @@ export default function Pricing() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div className="max-w-4xl mx-auto">
                     {plans.map((plan, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                            className={`relative rounded-2xl p-7 flex flex-col ${plan.highlighted
-                                ? "bg-[#222222] border-2 border-[#FA8112] shadow-2xl shadow-[#FA8112]/20"
-                                : "bg-[#F5E7C6] border border-[#E8D5A8] shadow-sm"
-                                }`}
+                            className="relative rounded-3xl overflow-hidden bg-[#121212] border border-white/10 shadow-2xl"
                         >
-                            {/* Top orange glow line on highlighted */}
-                            {plan.highlighted && (
-                                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-[#FA8112] to-transparent" />
-                            )}
+                            {/* Accent Glows */}
+                            <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#FA8112]/20 blur-[100px] rounded-full" />
+                            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-[#FA8112]/10 blur-[100px] rounded-full" />
 
-                            {plan.badge && (
-                                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FA8112] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
-                                    {plan.badge}
+                            <div className="relative z-10 flex flex-col md:flex-row">
+                                {/* Left Side - Info */}
+                                <div className="flex-1 p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/5">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FA8112]/10 border border-[#FA8112]/30 text-[#FA8112] text-xs font-bold uppercase tracking-wider mb-6">
+                                        {plan.badge}
+                                    </div>
+                                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{plan.name}</h3>
+                                    <p className="text-[#FA8112] font-medium mb-6 text-lg">{plan.tagline}</p>
+                                    <p className="text-white/60 leading-relaxed mb-8 text-lg">
+                                        {plan.description}
+                                    </p>
+
+                                    <div className="flex items-baseline gap-2 mb-8">
+                                        <span className="text-2xl font-medium text-[#FA8112]">$</span>
+                                        <span className="text-6xl font-black text-white">{plan.price}</span>
+                                        <span className="text-white/40 font-medium">/ ASIN</span>
+                                    </div>
+
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FA8112] hover:bg-[#e0710f] text-white rounded-xl font-bold text-lg transition-all active:scale-95 shadow-lg shadow-[#FA8112]/20 group"
+                                    >
+                                        {plan.cta}
+                                        <Zap size={18} className="transition-transform group-hover:scale-125" />
+                                    </Link>
                                 </div>
-                            )}
 
-                            <div className="mb-6">
-                                <h3 className={`font-bold text-xl mb-1 text-white`}>{plan.name}</h3>
-                                <p className={`text-sm ${plan.highlighted ? "text-[#FA8112]" : "text-white/60"}`}>{plan.tagline}</p>
-                            </div>
+                                {/* Right Side - Features */}
+                                <div className="flex-1 p-8 md:p-12 bg-white/[0.02]">
+                                    <div className="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">What's Included</div>
+                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                                        {plan.features.map((feat, j) => (
+                                            <li key={j} className="flex items-start gap-3 text-white/80">
+                                                <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0 text-[#FA8112]" />
+                                                <span className="text-sm font-medium">{feat}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
 
-                            <div className="mb-6">
-                                <div className="flex items-baseline gap-1">
-                                    {plan.price !== "Custom" && <span className={`text-lg font-medium ${plan.highlighted ? "text-[#FA8112]" : "text-white/60"}`}>$</span>}
-                                    <span className={`font-black text-4xl text-white`}>{plan.price}</span>
-                                    <span className={`text-sm ${plan.highlighted ? "text-white/60" : "text-white/60"}`}>{plan.period}</span>
+                                    <div className="mt-12 p-4 rounded-xl bg-white/5 border border-white/5 text-center">
+                                        <p className="text-white/40 text-xs">Customized strategy for every marketplace. No setup fees.</p>
+                                    </div>
                                 </div>
-                                <p className={`text-sm mt-2 leading-relaxed ${plan.highlighted ? "text-white/70" : "text-white/60"}`}>{plan.description}</p>
                             </div>
-
-                            <ul className="space-y-3 mb-8 flex-1">
-                                {plan.features.map((feat, j) => (
-                                    <li key={j} className={`flex items-start gap-2.5 text-sm ${plan.highlighted ? "text-white/80" : "text-white/70"}`}>
-                                        <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 ${plan.highlighted ? "text-[#FA8112]" : "text-[#FA8112]"}`} />
-                                        <span>{feat}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <Link
-                                href="/contact"
-                                className={`w-full py-3.5 rounded-xl font-semibold text-center transition-all duration-300 active:scale-95 text-sm ${plan.highlighted
-                                    ? "bg-[#FA8112] text-white hover:bg-[#e0710f] shadow-md shadow-[#FA8112]/30"
-                                    : "bg-[#222222] text-white hover:bg-[#333333]"
-                                    }`}
-                            >
-                                {plan.cta}
-                            </Link>
                         </motion.div>
                     ))}
                 </div>

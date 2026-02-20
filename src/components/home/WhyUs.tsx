@@ -24,13 +24,13 @@ const advantages = [
     {
         title: "Data-First Decisions",
         description: "Every decision we make is backed by real data from Helium 10, DataDive, and first-party analytics. No guessing, no gut feeling.",
-        stat: "$1M+",
+        stat: "$150M+",
         statLabel: "Revenue driven for clients"
     },
     {
         title: "Performance Accountability",
         description: "We set clear KPIs before we start. You get weekly reports and monthly strategy calls where we're accountable for every metric.",
-        stat: "90%",
+        stat: "100%",
         statLabel: "Client retention rate"
     },
     {

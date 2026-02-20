@@ -28,5 +28,22 @@ export async function submitContactForm(formData: FormData) {
         return { error: "Failed to submit form. Please try again later." };
     }
 
+    // Email Notification to Admin
+    try {
+        // This is a placeholder for actual email sending logic (e.g., using Resend, SendGrid, or nodemailer)
+        // For now, we log the intent as requested.
+        console.log(`[EMAIL NOTIFICATION] Sending lead data to hello@ecomstridesolution.com:`, {
+            to: "hello@ecomstridesolution.com",
+            subject: `New Lead: ${name}`,
+            data: { name, email, phone, service, message }
+        });
+
+        // In a real production environment, you would call your email service here:
+        // await resend.emails.send({ ... });
+    } catch (emailError) {
+        console.error("Email notification failed:", emailError);
+        // We still return success because the lead was saved to the database
+    }
+
     return { success: true };
 }
