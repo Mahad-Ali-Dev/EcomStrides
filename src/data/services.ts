@@ -343,5 +343,29 @@ export const services: Service[] = [
         image: "/images/services/branding.jpg",
         accentColor: "orange",
     },
+    {
+        id: "freight-forwarding",
+        title: "Freight Forwarding & Shipping",
+        tagline: "Seamless global logistics from factory to warehouse",
+        description: "Reliable and cost-effective shipping solutions from China to UK, USA, Europe, and beyond. We handle the entire logistics chain, ensuring your inventory arrives safely and on time.",
+        longDescription: "Navigating international shipping can be one of the most challenging aspects of an Amazon business. Our dedicated freight forwarding team specializes in DDP (Delivered Duty Paid) shipping, meaning we handle all customs duties, taxes, and import documentation for you. Whether you need Sea Freight for cost-efficiency or Air Freight for speed, we provide door-to-door solutions that include factory pickup, consolidation, and direct delivery to Amazon FBA warehouses or your own 3PL.",
+        benefits: [
+            "DDP shipping (Duty & Taxes included)",
+            "Door-to-door delivery from China factories",
+            "Specialized routes to UK, USA, and Europe",
+            "Customs clearance & documentation handling",
+            "Sea, Air, and Rail freight options",
+            "Shipment consolidation & inspection",
+            "Real-time tracking & logistics support",
+        ],
+        deliverables: [
+            "Optimized shipping quotes & routes",
+            "Booking confirmation & Bill of Lading",
+            "Customs clearance documentation",
+            "FBA appointment & delivery confirmation",
+        ],
+        image: "/images/services/freight-forwarding.jpg",
+        accentColor: "orange",
+    },
 ];
 

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const faqs = [
     {
         q: "How fast can I see results?",
-        a: "Typically, our clients see initial traction within the first 14 days of optimization. Full scaling usually takes 3-6 months depending on the category competitiveness."
+        a: "Typically, our clients see initial traction within the first 14 days of optimization. Full scaling usually takes 15-30 days depending on the category competitiveness."
     },
     {
         q: "Do you guarantee sales?",
