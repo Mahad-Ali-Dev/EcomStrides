@@ -9,17 +9,17 @@ const plans = [
         name: "Amazon A-Z Management",
         tagline: "Full-service growth for Amazon brands",
         price: "150-250",
-        period: "/ ASIN",
-        description: "Everything you need to scale including full account management, A+ content, and advanced PPC optimization.",
+        period: "/ month",
+        description: "Comprehensive end-to-end management to scale your Amazon presence with data-driven strategies and expert execution.",
         features: [
+            "Expert Product Launching",
+            "Strategic Product Research",
+            "Reliable Product Sourcing",
             "Full Account Management",
             "A+ Content & EBC Design",
             "Advanced PPC Optimization",
             "Inventory Forecasting",
             "Review Management",
-            "Bi-weekly Strategy Calls",
-            "Dedicated Account Manager",
-            "Competitor Monitoring",
         ],
         cta: "Get Started",
         highlighted: true,
@@ -78,7 +78,7 @@ export default function Pricing() {
                                     <div className="flex items-baseline gap-2 mb-8">
                                         <span className="text-2xl font-medium text-[#FA8112]">$</span>
                                         <span className="text-6xl font-black text-white">{plan.price}</span>
-                                        <span className="text-white/40 font-medium">/ ASIN</span>
+                                        <span className="text-white/40 font-medium">{plan.period}</span>
                                     </div>
 
                                     <Link

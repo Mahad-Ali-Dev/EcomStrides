@@ -37,13 +37,13 @@ export default function Navbar() {
                     : "bg-transparent py-5"
             )}
         >
-            <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+            <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-20">
                 {/* Logo */}
                 <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
                     <img
                         src="/1.png"
                         alt="EcomStride"
-                        className="h-14 md:h-20 w-auto object-contain"
+                        className="h-18 md:h-24 w-auto object-contain"
                     />
                 </Link>
 
